@@ -8,7 +8,7 @@ h1: 很高兴认识你
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">关于</h2>
+          <h2 class="section-heading text-uppercase">博客</h2>
           
         </div>
       </div>
@@ -19,13 +19,14 @@ h1: 很高兴认识你
               <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
               </div>
+               {% for post in site.posts %}
               <div class="timeline-panel">
                 <div class="timeline-heading" >
-                  <h4>2009-2011</h4>
-                  <h4 class="subheading"><a  href="sec.html" style="color: black">我们卑微的起点</a></h4>
+                  <h4>{{post.time}}</h4>
+                  <h4 class="subheading"><a  href="{{post.url}}" style="color: black">{{post.title}}</a></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted" >Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。还有，快乐的，她谁是明智的，整个拒绝有时候那些谁拥有的一些人，而他是被接受的，但是，频繁，并与canticles好评，增强疼痛，让它显示！</p>
+                  <p class="text-muted" >{{post.text}}</p>
                 </div>
               </div>
             </li>
@@ -33,45 +34,9 @@ h1: 很高兴认识你
               <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
               </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>三月 2011</h4>
-                  <h4 class="subheading">代理商诞生了</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。还有，快乐的，她谁是明智的，整个拒绝有时候那些谁拥有的一些人，而他是被接受的，但是，频繁，并与canticles好评，增强疼痛，让它显示！</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>十二月 2012</h4>
-                  <h4 class="subheading">过渡到全面服务</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。还有，快乐的，她谁是明智的，整个拒绝有时候那些谁拥有的一些人，而他是被接受的，但是，频繁，并与canticles好评，增强疼痛，让它显示！</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="">
-              </div>
-              
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>七月 2014</h4>
-                  <h4 class="subheading">第二阶段扩张</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem存有悲坐阿梅德，consectetur adipiscing ELIT。还有，快乐的，她谁是明智的，整个拒绝有时候那些谁拥有的一些人，而他是被接受的，但是，频繁，并与canticles好评，增强疼痛，让它显示！</p>
-                </div>
-              </div>
-            </li>
+           {% endfor %}
+
+           
             <li class="timeline-inverted">
               <div class="timeline-image">
                 <h4>成为

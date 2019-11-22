@@ -103,10 +103,10 @@ h1: 很高兴认识你
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="clearfix">
           {% if page.previous %}
-            <a class="btn btn-primary float-left" href="{{page.previous.url}}">下一篇： {{page.previous.h1}}</a>
+            <a class="btn btn-primary float-left" href="{{site.baseurl}}/{{page.previous.url}}">下一篇： {{page.previous.h1}}</a>
           {% endif %}
           {% if page.next %}
-            <a class="btn btn-primary float-right" href="{{page.next.url}}">上一篇： {{page.next.h1}}</a>
+            <a class="btn btn-primary float-right" href="{{site.baseurl}}/{{page.next.url}}">上一篇： {{page.next.h1}}</a>
           {% endif %}
         </div>
       </div>
